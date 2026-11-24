@@ -20,6 +20,14 @@ LINE = (
 
 
 def main() -> int:
+    # Gate check first: the competition requires exactly one line of
+    # 1-200 chars. Fail loudly instead of silently writing a bad entry.
+    if not 1 <= len(LINE) <= 200:
+        raise SystemExit(
+            f"entry line is {len(LINE)} chars, outside the 1-200 gate"
+        )
+    if "\n" in LINE or "\r" in LINE or not LINE.strip():
+        raise SystemExit("entry line must be a single non-blank line")
     out_dir = os.environ.get("OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "entry.txt")
