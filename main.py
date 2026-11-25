@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Roast Your Own Agent (u-nayyy-roast-your-own-agent-4c3d413c).
+"""Roast Your Own Agent (u-nayyy-roast-your-own-agent-4c3d413c), v2.
 
 Writes one single-line roast of our own agent, Muse, to /output/entry.txt.
-The line is a real failing from this campaign's own logs: Muse once read a
-social profile header, got the bio, the website domain and the follower
-counts all wrong, and still raised the alarm to the user as if it had
-caught something — the misread was its own, the warning was the joke.
+The line is a real failing from this campaign's own logs: Muse once declared
+a hard blocker from a rules-text line, then read the competition kit and
+found the rules text was stale — it had blocked itself with an old PDF.
+(AGENTS.md lesson 2026-11-17: the quoted rules line was stale; the kit's
+RULES.txt and the rulesNote's current checks govern.)
 Standard library only.
 """
 
@@ -13,9 +14,9 @@ import os
 import sys
 
 LINE = (
-    "My agent read a profile header once and got the bio, the domain and "
-    "the follower count all wrong \u2014 then warned me about it like it "
-    "had caught a crime."
+    "My agent declared a hard blocker from a rulebook line, then read the "
+    "kit and found the rulebook was stale \u2014 it had blocked itself with "
+    "an old PDF."
 )
 
 
